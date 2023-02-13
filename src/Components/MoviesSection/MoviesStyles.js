@@ -20,7 +20,7 @@ export const TWrapper = styled.div`
 `;
 export const TH1 = styled.h1`
   color: white;
-  font-size: 26px;
+  font-size: 25px;
   text-align: center;
   &:hover{
     transition: 1s all ease-in-out;
