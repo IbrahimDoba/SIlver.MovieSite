@@ -8,7 +8,7 @@ import SeriesCard from "./SeriesCard";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  height: 45vh;
+  height: 50vh;
   color: white;
   display: flex;
   align-items: center;
@@ -17,6 +17,7 @@ const Container = styled.div`
   border: 2px solid white;
   overflow: hidden;
   position: relative;
+  background-color: #1d1d1d;
 
 `;
 const Wrapper = styled.div`
@@ -30,6 +31,10 @@ const H1 = styled.h1`
   color: white;
   font-size: 26px;
   text-align: center;
+  background-color: #1d1d1d;
+  @media screen and (max-width:900px) {
+    font-size: 18px;
+  }
   &:hover{
     transition: 1s all ease-in-out;
     color: #32cd32;
@@ -41,14 +46,23 @@ const Arrow = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  background-color: #1d1d1d;
+
 `;
 const Cards = styled.div`
-  display: flex;
+   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
   transition: transform 0.6s ease-in-out;
   justify-content: space-between;
+  align-items: center;
+  background-color: #1d1d1d;
+
+  /* border: 2px solid green; */
+  @media screen and (max-width:900px) {
+  flex-wrap: wrap;
+}
 `;
 
 const IconRight = styled(AiOutlineArrowRight)`
@@ -60,6 +74,8 @@ const IconRight = styled(AiOutlineArrowRight)`
   border-radius: 50%;
   color: white;
   cursor: pointer;
+  background-color: #1d1d1d;
+
 `;
 const IconLeft = styled(AiOutlineArrowLeft)`
   z-index: 3;
@@ -71,6 +87,8 @@ const IconLeft = styled(AiOutlineArrowLeft)`
   border-radius: 50%;
   color: white;
   cursor: pointer;
+  background-color: #1d1d1d;
+
 `;
 
 const Series = () => {

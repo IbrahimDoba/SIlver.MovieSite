@@ -12,23 +12,34 @@ const Container = styled.div`
   width: 100vw;
   color: white;
   overflow-x: hidden;
+  background-color: #1d1d1d;
 `;
 const Wrapper = styled.div`
-  display: flex;
+   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  /* border: 2px solid blue; */
   background-color: #1d1d1d;
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const ConImage = styled.div`
   width: 100%;
   height: 100%;
+  /* border: 2px solid yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   flex: 1;
+  @media screen and (max-width: 700px) {
+    width: 60%;
+    margin-top: 10px;
+  }
 `;
 const BgImage = styled.img`
   object-fit: contain;
@@ -37,7 +48,7 @@ const BgImage = styled.img`
   background-color: #1d1d1d;
 `;
 const Details = styled.div`
-  flex: 1;
+ flex: 1;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -45,55 +56,115 @@ const Details = styled.div`
   margin-left: 10px;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
 `;
 const BottomLeft = styled.div`
-  top: 20%;
+   top: 30%;
   flex: 1;
   background-color: transparent;
   position: absolute;
-
+  /* left: 1;
+  right: 0; */
   width: 45%;
+  @media screen and (max-width: 700px) {
+   top: 10%;
+   width: 60%;
+  }
 `;
 const Name = styled.div`
-  font-size: 2vw;
+   font-size: 2vw;
   background-color: transparent;
   margin-bottom: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `;
 
 
 const Seasons = styled.div`
   font-size: 2vw;
   background-color: transparent;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 
 const Episodes = styled.div`
   font-size: 2vw;
   background-color: transparent;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 const Rating = styled.div`
-  font-size: 2vw;
+   font-size: 2vw;
   background-color: transparent;
   margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 const Language = styled.div`
-  font-size: 1.6vw;
+   font-size: 1.6vw;
   background-color: transparent;
   margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const OverView = styled.p`
   font-size: 1.3vw;
   background-color: transparent;
-  margin-top:10px;
+  margin-top: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
+  }
 `;
 const Status = styled.p`
-  font-size: 1.6vw;
+   font-size: 1.6vw;
   background-color: transparent;
+  margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const TagLine = styled.p`
-  font-size: 1.1vw;
+  font-size: 22px;
   background-color: transparent;
   margin-top: 10px;
   color: #fffdd0;
+  @media screen and (max-width: 800px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const BottomRight = styled.div`
   top: 50%;

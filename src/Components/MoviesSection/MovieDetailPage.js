@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  useParams,
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
@@ -14,7 +12,7 @@ const Container = styled.div`
   width: 100vw;
   color: white;
   overflow-x: hidden;
-
+  background-color: #1d1d1d;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -24,7 +22,10 @@ const Wrapper = styled.div`
   height: 100%;
   /* border: 2px solid blue; */
   background-color: #1d1d1d;
-
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const ConImage = styled.div`
   width: 100%;
@@ -35,6 +36,10 @@ const ConImage = styled.div`
   align-items: center;
   position: relative;
   flex: 1;
+  @media screen and (max-width: 700px) {
+    width: 60%;
+    margin-top: 10px;
+  }
 `;
 const BgImage = styled.img`
   /* object-fit: fill; */
@@ -43,6 +48,7 @@ const BgImage = styled.img`
   height: 100%;
   width: 100%;
   background-color: #1d1d1d;
+
 `;
 const Details = styled.div`
   flex: 1;
@@ -53,6 +59,12 @@ const Details = styled.div`
   margin-left: 10px;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
 `;
 const BottomLeft = styled.div`
   top: 30%;
@@ -62,43 +74,88 @@ const BottomLeft = styled.div`
   /* left: 1;
   right: 0; */
   width: 45%;
+  @media screen and (max-width: 700px) {
+   top: 10%;
+   width: 60%;
+  }
 `;
 const Name = styled.div`
   font-size: 2vw;
   background-color: transparent;
   margin-bottom: 10px;
-
+  @media screen and (max-width: 800px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `;
 
 const ReleaseDt = styled.div`
   font-size: 2vw;
   background-color: transparent;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 const Rating = styled.div`
   font-size: 2vw;
   background-color: transparent;
   margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 const Runtime = styled.div`
   font-size: 1.6vw;
   background-color: transparent;
   margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const Status = styled.p`
   font-size: 1.6vw;
   background-color: transparent;
   margin-top: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const OverView = styled.p`
   font-size: 1.3vw;
   background-color: transparent;
   margin-top: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
+  }
 `;
 const TagLine = styled.p`
-  font-size: 1.1vw;
+  font-size: 22px;
   background-color: transparent;
   margin-top: 10px;
-  color: #FFFDD0;
+  color: #fffdd0;
+  @media screen and (max-width: 800px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
 `;
 const BottomRight = styled.div`
   top: 50%;
@@ -114,7 +171,6 @@ const WatchProvider = styled.div`
 const MovieDetailPage = () => {
   const [movie, setMovie] = useState({});
   const movieId = useParams();
-  
 
   useEffect(() => {
     axios
@@ -124,7 +180,6 @@ const MovieDetailPage = () => {
       .then((response) => {
         setMovie(response.data);
       });
-      
   }, [movieId]);
   console.log("rr", movieId);
   console.log("movie", movie);
@@ -139,7 +194,7 @@ const MovieDetailPage = () => {
 
   return (
     <Container>
-      <Navbar/>
+      <Navbar />
       <Wrapper>
         <ConImage>
           <BgImage

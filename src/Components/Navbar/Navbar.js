@@ -10,7 +10,9 @@ import styled from "styled-components";
   overflow-x: hidden;
   overflow: hidden;
 
-  
+  @media screen and (max-width:900px) {
+    height: 60px;
+  }
 `;
  const NavbarWrapper = styled.div`
   display: flex;
@@ -38,6 +40,9 @@ import styled from "styled-components";
     transition: all 0.5s ease;
     color: #01bf71;
   }
+  @media screen and (max-width:900px) {
+    font-size: 20px;
+  }
 `;
  const NavRight = styled.div`
   flex: 2;
@@ -62,6 +67,9 @@ import styled from "styled-components";
   &.active {
     border-bottom: 1px solid #01bf71;
     color: #01bf71;
+  }
+  @media screen and (max-width:900px) {
+    font-size: 13px;
   }
 `;
 

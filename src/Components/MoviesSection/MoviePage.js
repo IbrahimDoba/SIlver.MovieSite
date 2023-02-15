@@ -49,6 +49,10 @@ const MovieImage = styled.img`
   position: relative;
   z-index: 4;
   top: 1%;
+  @media screen and (max-width: 505px) {
+    width: 100%;
+    border: 2px solid white ;
+  } 
 `;
 const Border = styled.div`
   position: absolute;
@@ -57,6 +61,9 @@ const Border = styled.div`
   height: 82%;
   z-index: 1;
   border-radius: 6px;
+  @media screen and (max-width: 505px) {
+    display: none;
+    } 
 `;
 const Rating = styled.div`
   display: flex;
@@ -81,6 +88,11 @@ const MovieCard = styled.div`
   position: relative;
   cursor: pointer;
   background-color: transparent;
+  @media screen and (max-width: 505px) {
+    width: 130px;
+    /* margin: 10px 20px; */
+  } 
+ 
 
   &:hover ${MovieImage} {
     opacity: 0.5;
@@ -135,6 +147,10 @@ const PageBtns = styled.div`
   display: flex;
   width: 20%;
   justify-content: space-between;
+  @media screen and (max-width: 505px) {
+    width: 50%;
+    margin: 10px 0;
+  } 
 `;
 const PageNum = styled.div`
   background-color: transparent;

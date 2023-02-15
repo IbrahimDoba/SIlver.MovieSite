@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { config } from "../MoviesSection/confirg";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Loadingsign from "../Apiresponse/Loadingsign";
+import Loadingsign from "../Assets/Loadingsign";
 import { AiFillStar } from "react-icons/ai";
 
 const Container = styled.div`
@@ -45,20 +45,27 @@ const Buttondiv = styled.div`
   top: 80%;
 `;
 const MovieImage = styled.img`
-  width: 200px;
+ width: 200px;
   height: 80%;
   /* border: 5px solid white; */
   position: relative;
   z-index: 4;
   top: 1%;
+  @media screen and (max-width: 505px) {
+    width: 100%;
+    border: 2px solid white ;
+  } 
 `;
 const Border = styled.div`
-  position: absolute;
+position: absolute;
   border: 5px solid white;
   width: 210px;
   height: 82%;
   z-index: 1;
   border-radius: 6px;
+  @media screen and (max-width: 505px) {
+    display: none;
+    } 
 `;
 const Rating = styled.div`
   display: flex;
@@ -74,15 +81,19 @@ const Rating = styled.div`
   top: 0;
 `;
 const MovieCard = styled.div`
-  display: flex;
+ display: flex;
   flex-direction: column;
   align-items: center;
   width: 200px;
   height: 350px;
   margin: 30px 25px;
   position: relative;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
+  @media screen and (max-width: 505px) {
+    width: 130px;
+    /* margin: 10px 20px; */
+  } 
   &:hover ${MovieImage} {
     opacity: 0.5;
     transition: 0.3s all ease-in-out;
@@ -140,10 +151,14 @@ const Releasedt = styled.div`
 `;
 
 const PageBtns = styled.div`
-  background-color: transparent;
+ background-color: transparent;
   display: flex;
   width: 20%;
   justify-content: space-between;
+  @media screen and (max-width: 505px) {
+    width: 50%;
+    margin: 10px 0;
+  } 
   
 `;
 const PageNum = styled.div`

@@ -3,12 +3,13 @@ import styled from "styled-components";
 import {MdOutlineDownloading} from "react-icons/md"
 
 export const TContainer = styled.div`
-  height: 45vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   border: 2px solid white;
+  background-color: #1d1d1d;
 
 `;
 export const TWrapper = styled.div`
@@ -17,11 +18,17 @@ export const TWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  
 `;
 export const TH1 = styled.h1`
   color: white;
   font-size: 25px;
   text-align: center;
+  background-color: #1d1d1d;
+  @media screen and (max-width:900px) {
+    font-size: 18px;
+  }
+
   &:hover{
     transition: 1s all ease-in-out;
     color: #32cd32;
@@ -33,7 +40,8 @@ export const Arrow = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  
+  background-color: #1d1d1d;
+
 `;
 export const TCards = styled.div`
   display: flex;
@@ -42,6 +50,13 @@ export const TCards = styled.div`
   height: 100%;
   transition: transform 0.6s ease-in-out;
   justify-content: space-between;
+  align-items: center;
+  background-color: #1d1d1d;
+
+  /* border: 2px solid green; */
+  @media screen and (max-width:900px) {
+  flex-wrap: wrap;
+}
 
 `;
 
@@ -55,6 +70,8 @@ export const IconRight = styled(AiOutlineArrowRight)`
   border-radius: 50%;
   color: white;
   cursor: pointer;
+  background-color: #1d1d1d;
+
 `;
 export const IconLeft = styled(AiOutlineArrowLeft)`
   z-index: 3;
@@ -66,6 +83,7 @@ export const IconLeft = styled(AiOutlineArrowLeft)`
   border-radius: 50%;
   color: white;
   cursor: pointer;
+  background-color: #1d1d1d;
 
 `;
 
